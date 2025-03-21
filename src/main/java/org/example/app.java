@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.motivation.controller.Motivation;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -86,20 +88,22 @@ public class app { //기능적인 부분
                 }
 
                 System.out.println("=".repeat(40));
+/// /startswith
+            } else if (cmd.equals("delete")){
+                int iid = sc.nextInt();
 
-            } else if (cmd.equals("delete")) {
+                if (motivations.size(iid-1) > motivations.size()) {
+                    System.out.println("존재하지않는 번호입니다.");
+                    continue;
 
-                System.out.print("삭제할 번호를 입력: ");
-                String iid = sc.nextLine().trim();
-//                if (motivations.get(iid) > motivations.size()) {
-//                    System.out.println("존재하지않는 번호입니다.");
-//                    continue;
+                }System.out.printf("%d번 motivation이 삭제되었습니다",iid);
+                /// //
+//                Motivation motivation = motivations.get();
+//                if (iid.contains(Integer.())) {
+//                    System.out.printf("%d번 motivation을 삭제했습니다\n", iid);
+//
+//                    motivations.remove();
 //                }
-            if (iid.contains(Integer.toString.)) {
-                System.out.printf("%d번 motivation을 삭제했습니다\n", iid);
-
-                motivations.remove();
-            }
 //            else if (cmd.equals("update")) {
 //
 //                Motivation motivation = motivations.get(id);
@@ -113,3 +117,4 @@ public class app { //기능적인 부분
         }
     }
 
+}

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.motivation.entity;
 
 class Motivation { //조립 틀
     private int id;
