@@ -1,6 +1,6 @@
 package org.example.motivation.entity;
 
-class Motivation { //조립 틀
+public class Motivation {
     private int id;
     private String body;
     private String source;
@@ -11,23 +11,36 @@ class Motivation { //조립 틀
         this.source = source;
     }
 
-
     public int getId() {
         return id;
     }
-    public String getSource() {
-        return source;
-    }
-    public String getBody() {
-        return body;
-    }
+
     public void setId(int id) {
         this.id = id;
     }
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
     public void setSource(String source) {
         this.source = source;
     }
-    public void setBody(String body) {
-        this.body = body;
+
+    @Override
+    public String toString() {
+        return "Motivation{" +
+                "id=" + id +
+                ", body='" + body + '\'' +
+                ", source='" + source + '\'' +
+                '}';
     }
 }
